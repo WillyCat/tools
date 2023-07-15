@@ -8,7 +8,7 @@ class tools {
 
 		$pattern = '#\[.*\]#';
 		$ostr = preg_replace ($pattern, '', $istr);
-		return $ostr;
+		return trim($ostr);
 	}
 
 	public static function
@@ -51,7 +51,7 @@ class tools {
 		$str = str_replace ([ 'É', 'É', 'È', 'Ê', 'Ë', 'Ę', 'Ē', 'Ĕ', 'Ė' ], 'E', $str);
 		$str = str_replace ([ 'î', 'ï', 'í', 'ì', 'ĩ', 'ĭ', 'į', 'i', 'ı' ], 'i', $str);
 		$str = str_replace ([ 'Î', 'Ï', 'Í', 'Ì', 'Ĩ', 'Ĭ', 'Į', 'İ', 'I' ], 'I', $str);
-		$str = str_replace ([ 'ô', 'ö', 'ó', 'ò', 'õ', 'ő', 'ø', 'ō', 'ŏ', 'ő', 'ő' ], 'o', $str);
+		$str = str_replace ([ 'ô', 'ö', 'ó', 'ò', 'õ', 'ő', 'ø', 'ō', 'ŏ', 'ő', 'ő', 'ô' ], 'o', $str);
 		$str = str_replace ([ 'Ô', 'Ö', 'Ó', 'Ò', 'Õ', 'Ő', 'Ø', 'Ō', 'Ŏ', 'Ő' ], 'O', $str);
 		$str = str_replace ([ 'ù', 'û', 'ü', 'ú', 'ű', 'ū', 'ů', 'ű', 'ų' ], 'u', $str);
 		$str = str_replace ([ 'Ù', 'Û', 'Ü', 'Ú', 'Ű', 'Ū', 'Ů', 'Ű', 'Ų' ], 'U', $str);
@@ -66,7 +66,7 @@ class tools {
 		$str = str_replace ([ 'π', 'Π' ], 'pi', $str);
 
 		$str = str_replace ([ 'ç', 'č', '¢', 'ć', 'ĉ', 'ċ' ], 'c', $str);
-		$str = str_replace ([ 'Ç', 'Č',      'Ć', 'Ĉ', 'Ċ' ], 'C', $str);
+		$str = str_replace ([ 'Ç', 'Č', 'Č', 'Ć', 'Ĉ', 'Ċ' ], 'C', $str);
 		$str = str_replace ([ 'Đ', 'Ð', 'Ď' ], 'D', $str); // les deux D barres ne sont pas la meme lettre :-(
 		$str = str_replace ([ 'ð', 'ď' ], 'd', $str);
 		$str = str_replace ([ 'Ġ', 'Ĝ', 'Ğ', 'Ģ' ], 'G', $str);
@@ -87,7 +87,7 @@ class tools {
 		$str = str_replace ([ 'Ŕ', 'Ŗ', 'Ř' ], 'R', $str);
 		$str = str_replace ([ 'ŕ', 'ŗ', 'ř' ], 'r', $str);
 		$str = str_replace ([ 'š', 'ş', 'ŝ', 'ś', 'ſ' ], 's', $str);
-		$str = str_replace ([ 'Š', 'Ş', 'Ŝ', 'Ś'      ], 'S', $str);
+		$str = str_replace ([ 'Š', 'Ş', 'Ŝ', 'Ś', 'ϟ' ], 'S', $str);
 		$str = str_replace ([ 'ț', 'ť', 'ŧ' ], 't', $str);
 		$str = str_replace ([ 'Ț', 'Ť', 'Ŧ' ], 'T', $str);
 		$str = str_replace ([ 'Ω', 'Ŵ' ], 'W', $str);
